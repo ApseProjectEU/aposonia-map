@@ -1,52 +1,52 @@
-/* ============================================================
-   ui.js – UI panel and player controls
-   ============================================================ */
+const UI = {
+    elements: {
+        sidebar: null,
+        closeSidebarBtn: null,
+        coordDisplay: null,
+        coordText: null,
+        exportBtn: null,
+        pointName: null,
+        pointDescription: null,
+        stressValue: null
+    },
 
-const UIModule = (() => {
-  const playerPanel = document.getElementById('player-panel');
-  const playerTitle = document.getElementById('player-title');
-  const playerLocation = document.getElementById('player-location');
-  const playerDescription = document.getElementById('player-description');
-  const audioPlayer = document.getElementById('audio-player');
-  const closeBtn = document.getElementById('close-player');
-  const categoryFilter = document.getElementById('category-filter');
+    init() {
+        this.elements.sidebar = document.getElementById('sidebar');
+        this.elements.closeSidebarBtn = document.getElementById('close-sidebar');
+        this.elements.coordDisplay = document.getElementById('coordinate-display');
+        this.elements.coordText = document.getElementById('coord-text');
+        this.elements.exportBtn = document.getElementById('export-btn');
+        this.elements.pointName = document.getElementById('point-name');
+        this.elements.pointDescription = document.getElementById('point-description');
+        this.elements.stressValue = document.getElementById('stress-value');
+        this.elements.closeSidebarBtn.addEventListener('click', () => this.closeSidebar());
+        this.elements.exportBtn.addEventListener('click', () => this.exportCoordinates());
+    },
 
-  let onFilterChange = null;
+    openSidebar(pointData) {
+        this.renderPointDetails(pointData);
+        this.elements.sidebar.classList.remove('hidden');
+    },
 
-  function init(callbacks) {
-    onFilterChange = callbacks.onFilterChange;
+    closeSidebar() {
+        this.elements.sidebar.classList.add('hidden');
+    },
 
-    closeBtn.addEventListener('click', () => {
-      hidePlayer();
-      audioPlayer.pause();
-    });
+    renderPointDetails(point) {
+        this.elements.pointName.textContent = point.name;
+        this.elements.pointDescription.textContent = point.description;
+        this.elements.stressValue.textContent = point.stress;
+    },
 
-    categoryFilter.addEventListener('change', () => {
-      if (onFilterChange) onFilterChange(categoryFilter.value);
-    });
-  }
+    updateCoordinateDisplay(lat, lng) {
+        const formattedLat = lat.toFixed(6);
+        const formattedLng = lng.toFixed(6);
+        this.elements.coordText.textContent = `Lat: ${formattedLat}, Lng: ${formattedLng}`;
+    },
 
-  function showPlayer(point) {
-    playerTitle.textContent = point.title;
-    playerLocation.textContent = `${point.location} — ${point.country}`;
-    playerDescription.textContent = point.description || '';
-
-    if (point.audio) {
-      audioPlayer.src = point.audio;
-      audioPlayer.load();
-      audioPlayer.play().catch(() => {
-        // Autoplay blocked – user must press play manually
-      });
-    } else {
-      audioPlayer.src = '';
+    exportCoordinates() {
+        if (window.MapModule && window.MapModule.exportTempMarkers) {
+            window.MapModule.exportTempMarkers();
+        }
     }
-
-    playerPanel.classList.remove('hidden');
-  }
-
-  function hidePlayer() {
-    playerPanel.classList.add('hidden');
-  }
-
-  return { init, showPlayer, hidePlayer };
-})();
+};
