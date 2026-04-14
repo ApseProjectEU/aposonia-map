@@ -1,26 +1,42 @@
 [
   {
-    "id": "point_001",
-    "name": "White Tower Area",
+    "id": "sound_001",
+    "name": "Tappa 1 — da definire",
     "lat": 40.6263,
     "lng": 22.9486,
-    "description": "Iconic waterfront landmark. High foot traffic, mixed urban soundscape with historical resonance.",
-    "stress": 7
+    "description": "Descrizione del punto sonoro 1. Da aggiornare.",
+    "audio": "audio/sound_001.mp3"
   },
   {
-    "id": "point_002",
-    "name": "Concert Hall Plaza",
-    "lat": 40.5935,
-    "lng": 22.9577,
-    "description": "Cultural hub near Megaro Moussikis. Evening activity peaks, blend of performance sounds and sea ambience.",
-    "stress": 5
+    "id": "sound_002",
+    "name": "Tappa 2 — da definire",
+    "lat": 40.6285,
+    "lng": 22.9465,
+    "description": "Descrizione del punto sonoro 2. Da aggiornare.",
+    "audio": "audio/sound_002.mp3"
   },
   {
-    "id": "point_003",
-    "name": "Nikis Avenue Corner",
-    "lat": 40.6320,
-    "lng": 22.9413,
-    "description": "Urban intersection with constant vehicle flow. Contrasts mechanical noise with distant sea sounds.",
-    "stress": 8
+    "id": "sound_003",
+    "name": "Tappa 3 — da definire",
+    "lat": 40.6305,
+    "lng": 22.9445,
+    "description": "Descrizione del punto sonoro 3. Da aggiornare.",
+    "audio": "audio/sound_003.mp3"
+  },
+  {
+    "id": "sound_004",
+    "name": "Tappa 4 — da definire",
+    "lat": 40.6325,
+    "lng": 22.9425,
+    "description": "Descrizione del punto sonoro 4. Da aggiornare.",
+    "audio": "audio/sound_004.mp3"
+  },
+  {
+    "id": "sound_005",
+    "name": "Tappa 5 — da definire",
+    "lat": 40.6345,
+    "lng": 22.9405,
+    "description": "Descrizione del punto sonoro 5. Da aggiornare.",
+    "audio": "audio/sound_005.mp3"
   }
 ]

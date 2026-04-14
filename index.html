@@ -1,29 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aposonía Map - Nea Paralia</title>
+    <title>Aposonía — Nea Paralia</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="coordinate-display">
-        <span id="coord-text">Click on map to get coordinates</span>
-        <button id="export-btn" title="Export temporary markers">Export</button>
+
+    <!-- Map title overlay -->
+    <div id="map-title">
+        <h1>Aposonía</h1>
+        <p>Nea Paralia · Thessaloniki</p>
     </div>
+
+    <!-- Coordinate helper (click on map to get coords) -->
+    <div id="coordinate-display">
+        <span id="coord-text">Clicca sulla mappa per le coordinate</span>
+        <button id="copy-coords-btn">Copia</button>
+    </div>
+
+    <!-- Map -->
     <div id="map"></div>
-    <div id="sidebar" class="sidebar hidden">
+
+    <!-- Audio Guide Sidebar -->
+    <div id="sidebar" class="hidden">
+        <div class="sidebar-bar"></div>
         <button id="close-sidebar" class="close-btn">&times;</button>
         <div id="sidebar-content">
+            <p id="point-number"></p>
             <h2 id="point-name"></h2>
-            <div id="point-description"></div>
-            <div id="point-stress">
-                <span class="stress-label">Stress Level:</span>
-                <span id="stress-value"></span>
+            <p id="point-description"></p>
+
+            <!-- Audio Player -->
+            <div id="audio-player">
+                <audio id="audio-element" preload="metadata"></audio>
+                <div id="player-controls">
+                    <button id="play-pause-btn" class="play-btn" disabled>
+                        <svg id="play-icon" viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"/></svg>
+                        <svg id="pause-icon" viewBox="0 0 24 24" class="hidden"><rect x="5" y="4" width="4" height="16"/><rect x="15" y="4" width="4" height="16"/></svg>
+                    </button>
+                    <div id="progress-container">
+                        <div id="progress-bar">
+                            <div id="progress-fill"></div>
+                        </div>
+                        <div id="time-display">
+                            <span id="current-time">0:00</span>
+                            <span id="total-time">0:00</span>
+                        </div>
+                    </div>
+                </div>
+                <p id="audio-status"></p>
             </div>
         </div>
     </div>
+
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="js/ui.js"></script>
     <script src="js/map.js"></script>
