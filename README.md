@@ -22,7 +22,7 @@ Open `index.html` in a browser. Map initializes centered on Nea Paralia.
 
 ## GitHub Pages
 
-Repository: https://github.com/ApseProjectEU/aposonia-map
+Repository: https://github.com/ApseProjectEU/aposonia-map  
 Live: https://apseprojecteu.github.io/aposonia-map
 
 ## License
