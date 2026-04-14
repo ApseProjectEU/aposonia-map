@@ -1,90 +1,26 @@
 [
   {
-    "id": "es-001",
-    "title": "Mercado de la Boqueria",
-    "location": "Barcelona",
-    "country": "Spain",
-    "lat": 41.3817,
-    "lng": 2.1715,
-    "category": "urban",
-    "description": "Morning sounds of the iconic covered market – vendors calling, footsteps on marble, the clatter of stalls opening.",
-    "audio": ""
+    "id": "point_001",
+    "name": "White Tower Area",
+    "lat": 40.6263,
+    "lng": 22.9486,
+    "description": "Iconic waterfront landmark. High foot traffic, mixed urban soundscape with historical resonance.",
+    "stress": 7
   },
   {
-    "id": "it-001",
-    "title": "Fontana di Trevi at Dawn",
-    "location": "Rome",
-    "country": "Italy",
-    "lat": 41.9009,
-    "lng": 12.4833,
-    "category": "water",
-    "description": "The constant cascade of Rome's most famous fountain before the tourist crowds arrive.",
-    "audio": ""
+    "id": "point_002",
+    "name": "Concert Hall Plaza",
+    "lat": 40.5935,
+    "lng": 22.9577,
+    "description": "Cultural hub near Megaro Moussikis. Evening activity peaks, blend of performance sounds and sea ambience.",
+    "stress": 5
   },
   {
-    "id": "gr-001",
-    "title": "Aegean Wave Field",
-    "location": "Santorini",
-    "country": "Greece",
-    "lat": 36.3932,
-    "lng": 25.4615,
-    "category": "nature",
-    "description": "Waves breaking against volcanic cliffs, seabirds overhead, wind through the caldera.",
-    "audio": ""
-  },
-  {
-    "id": "pt-001",
-    "title": "Fado do Porto",
-    "location": "Porto",
-    "country": "Portugal",
-    "lat": 41.1579,
-    "lng": -8.6291,
-    "category": "cultural",
-    "description": "A late-night fado performance recorded in a traditional tasca in the Ribeira district.",
-    "audio": ""
-  },
-  {
-    "id": "fr-001",
-    "title": "Camargue Wetlands",
-    "location": "Camargue",
-    "country": "France",
-    "lat": 43.5263,
-    "lng": 4.5683,
-    "category": "nature",
-    "description": "Dawn chorus in the Camargue delta – flamingos, herons and reed warblers across still water.",
-    "audio": ""
-  },
-  {
-    "id": "hr-001",
-    "title": "Sea Organ of Zadar",
-    "location": "Zadar",
-    "country": "Croatia",
-    "lat": 44.1194,
-    "lng": 15.2314,
-    "category": "water",
-    "description": "The unique tones produced by sea waves pushing air through marble steps along the Zadar promenade.",
-    "audio": ""
-  },
-  {
-    "id": "es-002",
-    "title": "Fiesta Mayor Drums",
-    "location": "Valencia",
-    "country": "Spain",
-    "lat": 39.4699,
-    "lng": -0.3763,
-    "category": "cultural",
-    "description": "Percussion procession during Las Fallas – hundreds of drummers filling the streets.",
-    "audio": ""
-  },
-  {
-    "id": "it-002",
-    "title": "Dolomiti Forest",
-    "location": "Dolomites",
-    "country": "Italy",
-    "lat": 46.4102,
-    "lng": 11.8440,
-    "category": "nature",
-    "description": "Silence interrupted only by wind in spruce trees and the distant call of a golden eagle.",
-    "audio": ""
+    "id": "point_003",
+    "name": "Nikis Avenue Corner",
+    "lat": 40.6320,
+    "lng": 22.9413,
+    "description": "Urban intersection with constant vehicle flow. Contrasts mechanical noise with distant sea sounds.",
+    "stress": 8
   }
 ]

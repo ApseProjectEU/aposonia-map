@@ -1,49 +1,12 @@
-/* ============================================================
-   main.js – Application entry point
-   ============================================================ */
-
-(async () => {
-  // Initialise map
-  MapModule.init();
-
-  // Load soundscape data
-  let allPoints = [];
-  try {
-    const response = await fetch('data/points.json');
-    if (!response.ok) throw new Error('Could not load points.json');
-    allPoints = await response.json();
-  } catch (err) {
-    console.warn('Using example data:', err.message);
-    try {
-      const response = await fetch('data/points-example.json');
-      allPoints = await response.json();
-    } catch (e) {
-      console.error('Failed to load any point data', e);
-    }
-  }
-
-  // Current active marker reference
-  let activeMarker = null;
-
-  function renderFiltered(category) {
-    const filtered =
-      category === 'all'
-        ? allPoints
-        : allPoints.filter((p) => p.category === category);
-
-    MapModule.renderPoints(filtered, (point, marker) => {
-      activeMarker = marker;
-      MapModule.setActiveMarker(marker);
-      MapModule.flyTo(point.lat, point.lng);
-      UIModule.showPlayer(point);
-    });
-  }
-
-  // Initialise UI
-  UIModule.init({
-    onFilterChange: (category) => renderFiltered(category),
-  });
-
-  // First render – show all points
-  renderFiltered('all');
-})();
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Aposonía Map initializing...');
+    UI.init();
+    console.log('UI module initialized');
+    MapModule.initMap();
+    console.log('Map module initialized');
+    MapModule.loadPoints();
+    window.UI = UI;
+    console.log('Aposonía Map ready');
+    console.log('Click on map to get coordinates and create temporary markers');
+    console.log('Click on red markers (if points.json loaded) to open details panel');
+});
