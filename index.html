@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aposonía Map – Soundscapes of South Europe</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+    <header id="site-header">
+      <h1>Aposonía Map</h1>
+      <p class="subtitle">Soundscapes of South Europe</p>
+    </header>
+
+    <div id="map-container">
+      <div id="map"></div>
+    </div>
+
+    <div id="player-panel" class="hidden">
+      <button id="close-player" aria-label="Close player">&times;</button>
+      <div id="player-info">
+        <h2 id="player-title"></h2>
+        <p id="player-location"></p>
+        <p id="player-description"></p>
+      </div>
+      <audio id="audio-player" controls>
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <div id="filter-panel">
+      <label for="category-filter">Filter by category:</label>
+      <select id="category-filter">
+        <option value="all">All</option>
+        <option value="nature">Nature</option>
+        <option value="urban">Urban</option>
+        <option value="cultural">Cultural</option>
+        <option value="water">Water</option>
+      </select>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

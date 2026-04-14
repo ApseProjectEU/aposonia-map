@@ -1,0 +1,13 @@
+[
+  {
+    "id": "example-001",
+    "title": "Example Soundscape",
+    "location": "Example City",
+    "country": "Example Country",
+    "lat": 40.0,
+    "lng": 10.0,
+    "category": "nature",
+    "description": "This is an example soundscape point. Replace with real data in points.json.",
+    "audio": ""
+  }
+]
