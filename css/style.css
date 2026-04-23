@@ -1,341 +1,505 @@
+/* ========================================
+   APOSONÍA - Museum-Quality Design System
+   ======================================== */
+
+:root {
+  /* Colors */
+  --bg-primary: #FAFAF9;
+  --bg-secondary: #F4F1EA;
+  --text-primary: #1A1A1A;
+  --text-secondary: #6B6B6B;
+  --accent-water: #2C4A6E;
+  --accent-warm: #8B7355;
+  --border: #E5E5E5;
+  
+  /* Spacing */
+  --space-xs: 20px;
+  --space-sm: 40px;
+  --space-md: 60px;
+  --space-lg: 100px;
+  --space-xl: 140px;
+  
+  /* Typography */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: Georgia, 'Times New Roman', serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+}
+
+/* ========================================
+   Reset & Base Styles
+   ======================================== */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    overflow: hidden;
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-#map {
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
+/* ========================================
+   Typography
+   ======================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 1em;
 }
 
-/* ─── Map Title Overlay ─────────────────────────────── */
-
-#map-title {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
-    background: white;
-    padding: 12px 18px;
-    border-radius: 12px;
-    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.13);
-    border-left: 4px solid #e07b39;
-    pointer-events: none;
+h1 {
+  font-size: clamp(48px, 8vw, 84px);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
-#map-title h1 {
-    font-size: 19px;
-    font-weight: 700;
-    color: #1a1a2e;
-    letter-spacing: -0.3px;
+h2 {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 400;
+  margin-bottom: 1.5em;
 }
 
-#map-title p {
-    font-size: 11px;
-    color: #888;
-    margin-top: 3px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+h3 {
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 400;
+  margin-bottom: 1.2em;
 }
 
-/* ─── Coordinate Display ────────────────────────────── */
-
-#coordinate-display {
-    position: fixed;
-    bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(255, 255, 255, 0.96);
-    padding: 8px 16px;
-    border-radius: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.13);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-family: 'Courier New', monospace;
-    font-size: 13px;
+p {
+  margin-bottom: 1.8em;
+  text-align: justify;
 }
 
-#coord-text {
-    color: #555;
+blockquote {
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.9;
+  padding: var(--space-md);
+  border-left: 3px solid var(--accent-warm);
+  margin: var(--space-md) 0;
+  background-color: var(--bg-secondary);
 }
 
-#copy-coords-btn {
-    background: #e07b39;
-    color: white;
-    border: none;
-    padding: 4px 12px;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 11px;
-    font-family: inherit;
-    transition: background 0.2s;
+cite {
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
 }
 
-#copy-coords-btn:hover {
-    background: #c0622a;
+/* ========================================
+   Layout Containers
+   ======================================== */
+
+.content-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
 }
 
-/* ─── Audio Markers ─────────────────────────────────── */
-
-.audio-marker-container {
-    position: relative;
-    width: 46px;
-    height: 46px;
+section {
+  padding: var(--space-lg) 0;
 }
 
-.audio-marker-inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 46px;
-    height: 46px;
-    background: #e07b39;
-    border-radius: 50%;
-    border: 3px solid white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 3px 12px rgba(224, 123, 57, 0.5);
-    z-index: 2;
-    cursor: pointer;
-    transition: transform 0.18s;
+/* ========================================
+   Language Switcher
+   ======================================== */
+
+.language-switcher {
+  position: fixed;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  z-index: 1000;
+  display: flex;
+  gap: 10px;
+  background-color: rgba(250, 250, 249, 0.95);
+  padding: 10px 15px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.audio-marker-inner:hover {
-    transform: scale(1.12);
+.language-switcher button {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  background-color: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.audio-marker-number {
-    color: white;
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 1;
+.language-switcher button:hover {
+  background-color: var(--bg-secondary);
+  border-color: var(--accent-water);
 }
 
-.audio-marker-pulse {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    background: rgba(224, 123, 57, 0.35);
-    animation: markerPulse 2.8s ease-out infinite;
-    z-index: 1;
+.language-switcher button.active {
+  background-color: var(--accent-water);
+  color: white;
+  border-color: var(--accent-water);
 }
 
-@keyframes markerPulse {
-    0%   { transform: scale(1);   opacity: 0.8; }
-    100% { transform: scale(2.6); opacity: 0;   }
+/* ========================================
+   Hero Section
+   ======================================== */
+
+#hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(to bottom, var(--bg-primary) 0%, var(--bg-secondary) 100%);
 }
 
-/* ─── Sidebar ───────────────────────────────────────── */
-
-#sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 390px;
-    height: 100vh;
-    background: #fff;
-    z-index: 2000;
-    box-shadow: -4px 0 28px rgba(0, 0, 0, 0.14);
-    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+  padding: var(--space-md);
 }
 
-#sidebar.hidden {
-    transform: translateX(100%);
+.hero-title {
+  margin-bottom: 0.3em;
+  color: var(--accent-water);
 }
 
-.sidebar-bar {
-    height: 6px;
-    background: linear-gradient(90deg, #e07b39, #f0a05a);
-    flex-shrink: 0;
+.hero-subtitle {
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-bottom: 2em;
+  text-align: center;
 }
 
-.close-btn {
-    position: absolute;
-    top: 18px;
-    right: 18px;
-    background: #f2f2f2;
-    color: #555;
-    border: none;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    font-size: 22px;
-    line-height: 1;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s;
-    z-index: 10;
+.cta-minimal {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 15px 40px;
+  border: 2px solid var(--accent-water);
+  color: var(--accent-water);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background-color: transparent;
 }
 
-.close-btn:hover {
-    background: #e5e5e5;
+.cta-minimal:hover {
+  background-color: var(--accent-water);
+  color: white;
 }
 
-#sidebar-content {
-    padding: 30px 28px 28px;
-    flex: 1;
-    overflow-y: auto;
+#waves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+  z-index: 1;
 }
 
-#point-number {
-    font-size: 11px;
-    font-weight: 700;
-    color: #e07b39;
-    text-transform: uppercase;
-    letter-spacing: 1.8px;
-    margin-bottom: 8px;
+/* ========================================
+   Introduction Section
+   ======================================== */
+
+#introduction {
+  background-color: var(--bg-primary);
 }
 
-#point-name {
-    font-size: 26px;
-    font-weight: 700;
-    color: #1a1a2e;
-    line-height: 1.2;
-    margin-bottom: 16px;
+.intro-text {
+  margin-bottom: var(--space-lg);
 }
 
-#point-description {
-    font-size: 15px;
-    line-height: 1.7;
-    color: #5a5a6e;
-    margin-bottom: 30px;
+.culture-moves-credit {
+  background-color: var(--bg-secondary);
+  padding: var(--space-md);
+  margin: var(--space-lg) 0;
+  border-left: 3px solid var(--accent-water);
 }
 
-/* ─── Audio Player ──────────────────────────────────── */
-
-#audio-player {
-    background: #f9f9fb;
-    border: 1px solid #ebebef;
-    border-radius: 16px;
-    padding: 20px;
+.culture-moves-credit p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 0;
 }
 
-#player-controls {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+.psychoacoustics-primer {
+  margin: var(--space-lg) 0;
 }
 
-.play-btn {
-    width: 54px;
-    height: 54px;
-    border-radius: 50%;
-    background: #e07b39;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    box-shadow: 0 4px 12px rgba(224, 123, 57, 0.4);
-    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+.artist-statement {
+  margin-top: var(--space-xl);
 }
 
-.play-btn:hover {
-    background: #c0622a;
-    transform: scale(1.06);
+/* ========================================
+   Map Section
+   ======================================== */
+
+#listening-map {
+  background-color: var(--bg-secondary);
 }
 
-.play-btn:disabled {
-    background: #ccc;
-    box-shadow: none;
-    cursor: not-allowed;
-    transform: none;
+.map-instruction {
+  text-align: center;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
 }
 
-.play-btn svg {
-    width: 20px;
-    height: 20px;
-    fill: white;
+#map-container {
+  height: 600px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto var(--space-lg);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.play-btn svg.hidden {
-    display: none;
+/* Custom Map Markers */
+.custom-marker {
+  background-color: var(--accent-water);
+  border: 3px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-#progress-container {
-    flex: 1;
+.custom-marker:hover {
+  transform: scale(1.15);
 }
 
-#progress-bar {
-    height: 5px;
-    background: #ddd;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-bottom: 8px;
-    position: relative;
+.marker-number {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
 }
 
-#progress-fill {
-    height: 100%;
-    background: #e07b39;
-    border-radius: 3px;
-    width: 0%;
-    transition: width 0.1s linear;
+/* ========================================
+   Station Panels
+   ======================================== */
+
+.station-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 800px;
+  max-height: 85vh;
+  background-color: white;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  z-index: 2000;
+  overflow-y: auto;
+  padding: var(--space-md);
+  display: none;
 }
 
-#time-display {
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-    color: #aaa;
-    font-family: 'Courier New', monospace;
+.station-panel.active {
+  display: block;
 }
 
-#audio-status {
-    text-align: center;
-    font-size: 12px;
-    color: #aaa;
-    margin-top: 12px;
-    min-height: 16px;
+.close-panel {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-secondary);
+  line-height: 1;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
 }
 
-/* ─── Mobile ────────────────────────────────────────── */
+.close-panel:hover {
+  color: var(--text-primary);
+}
+
+.station-header h3 {
+  color: var(--accent-water);
+  margin-bottom: 0.3em;
+}
+
+.station-location {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.audio-player {
+  margin: var(--space-md) 0;
+}
+
+.audio-player audio {
+  width: 100%;
+  height: 54px;
+}
+
+.curatorial-text {
+  margin: var(--space-md) 0;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border);
+}
+
+.metadata {
+  margin-top: var(--space-md);
+  padding: var(--space-sm);
+  background-color: var(--bg-secondary);
+  font-size: 14px;
+}
+
+.metadata dl {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 10px;
+}
+
+.metadata dt {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.metadata dd {
+  margin: 0;
+}
+
+/* Overlay for station panels */
+.panel-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1999;
+  display: none;
+}
+
+.panel-overlay.active {
+  display: block;
+}
+
+/* ========================================
+   About Section
+   ======================================== */
+
+#about {
+  background-color: var(--bg-primary);
+}
+
+.artist-bio,
+.funding-credit {
+  margin-bottom: var(--space-lg);
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+
+footer {
+  background-color: var(--bg-secondary);
+  padding: var(--space-md) 0;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+footer p {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+  text-align: center;
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
 
 @media (max-width: 768px) {
-    #sidebar {
-        width: 100%;
-        height: 72vh;
-        top: auto;
-        bottom: 0;
-        right: 0;
-        border-radius: 20px 20px 0 0;
-        transform: translateY(100%);
-    }
+  :root {
+    --space-md: 40px;
+    --space-lg: 60px;
+    --space-xl: 80px;
+  }
+  
+  body {
+    font-size: 16px;
+  }
+  
+  .language-switcher {
+    top: 15px;
+    right: 15px;
+    padding: 8px 10px;
+  }
+  
+  .language-switcher button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  
+  #map-container {
+    height: 400px;
+  }
+  
+  .station-panel {
+    width: 95%;
+    max-height: 90vh;
+    padding: var(--space-sm);
+  }
+  
+  .metadata dl {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+  
+  .metadata dt {
+    margin-top: 10px;
+  }
+  
+  p {
+    text-align: left;
+  }
+}
 
-    #sidebar.hidden {
-        transform: translateY(100%);
-    }
-
-    #sidebar:not(.hidden) {
-        transform: translateY(0);
-    }
-
-    #map-title {
-        top: 12px;
-        left: 12px;
-    }
-
-    #coordinate-display {
-        bottom: 12px;
-        font-size: 12px;
-    }
+/* Greek language adjustments */
+html[lang="el"] body {
+  font-size: 19px;
+  line-height: 1.85;
 }
