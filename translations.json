@@ -1,0 +1,230 @@
+{
+  "en": {
+    "hero": {
+      "eyebrow": "Sound Art · Thermaikos Gulf · 2024",
+      "title": "APOSONÍA",
+      "subtitle": "An investigation into underwater acoustic pollution and interspecies empathy",
+      "scroll": "Explore the map"
+    },
+    "map": {
+      "label": "Acoustic Field Recordings",
+      "title": "Five Listening Stations",
+      "instruction": "Select a station to listen"
+    },
+    "stations": [
+      {
+        "title": "Port Entrance",
+        "location": "40°37'54\"N  22°56'17\"E",
+        "description": "At the threshold between city and sea, cargo vessels generate low-frequency pressure waves that saturate the acoustic environment. The biological soundscape has retreated."
+      },
+      {
+        "title": "Northern Shallows",
+        "location": "40°39'07\"N  22°54'54\"E",
+        "description": "Shallow waters amplify anthropogenic noise through reflection. Fish communication signals are detectable only in brief intervals between vessel passages."
+      },
+      {
+        "title": "Central Gulf",
+        "location": "40°36'36\"N  22°58'12\"E",
+        "description": "The acoustic centre of the gulf. Here, multiple noise sources overlap continuously, creating a masking effect that disorients cetaceans using echolocation."
+      },
+      {
+        "title": "Southern Passage",
+        "location": "40°35'20\"N  22°59'42\"E",
+        "description": "Industrial facilities along the southern shore emit tonal noise through underwater structures. The recordings reveal a persistent 50 Hz hum beneath all other sounds."
+      },
+      {
+        "title": "Eastern Inlet",
+        "location": "40°37'35\"N  23°00'36\"E",
+        "description": "A semi-enclosed area where sound accumulates. Recreational boat traffic peaks in summer months, fragmenting the natural acoustic habitat seasonally."
+      }
+    ],
+    "panel": {
+      "listen": "Field Recording",
+      "depth": "Depth",
+      "recorded": "Recorded",
+      "duration": "Duration",
+      "no_audio": "Audio not yet available"
+    },
+    "about": {
+      "label": "About the Project",
+      "title": "Fight-or-Flight Underwater",
+      "body": "Aposonía (from Greek: absence of sound) is a sound art project by Gaetano Cappella investigating underwater acoustic pollution in Thermaikos Gulf, Thessaloniki. Through hydrophone field recordings and spatial composition, the project employs the human fight-or-flight response to generate interspecies empathy with marine organisms subjected to chronic anthropogenic noise. Developed during a residency supported by Culture Moves Europe (Creative Europe Programme / Goethe-Institut)."
+    },
+    "credits": {
+      "artist": "Gaetano Cappella",
+      "support": "Supported by Culture Moves Europe",
+      "programme": "Creative Europe Programme / Goethe-Institut"
+    }
+  },
+  "it": {
+    "hero": {
+      "eyebrow": "Sound Art · Golfo Termaico · 2024",
+      "title": "APOSONÍA",
+      "subtitle": "Un'indagine sull'inquinamento acustico subacqueo e l'empatia interspecifica",
+      "scroll": "Esplora la mappa"
+    },
+    "map": {
+      "label": "Registrazioni sul Campo",
+      "title": "Cinque Stazioni d'Ascolto",
+      "instruction": "Seleziona una stazione per ascoltare"
+    },
+    "stations": [
+      {
+        "title": "Ingresso del Porto",
+        "location": "40°37'54\"N  22°56'17\"E",
+        "description": "Alla soglia tra città e mare, le navi cargo generano onde di pressione a bassa frequenza che saturano l'ambiente acustico. Il paesaggio sonoro biologico si è ritirato."
+      },
+      {
+        "title": "Bassi Fondali Nord",
+        "location": "40°39'07\"N  22°54'54\"E",
+        "description": "Le acque basse amplificano il rumore antropogenico per riflessione. I segnali di comunicazione dei pesci sono rilevabili solo in brevi intervalli tra i passaggi delle imbarcazioni."
+      },
+      {
+        "title": "Golfo Centrale",
+        "location": "40°36'36\"N  22°58'12\"E",
+        "description": "Il centro acustico del golfo. Più fonti di rumore si sovrappongono continuamente, creando un effetto mascherante che disorenta i cetacei che usano l'ecolocalizzazione."
+      },
+      {
+        "title": "Passaggio Sud",
+        "location": "40°35'20\"N  22°59'42\"E",
+        "description": "Gli impianti industriali lungo la costa meridionale emettono rumore tonale attraverso strutture subacquee. Le registrazioni rivelano un ronzio persistente a 50 Hz."
+      },
+      {
+        "title": "Insenatura Est",
+        "location": "40°37'35\"N  23°00'36\"E",
+        "description": "Un'area semi-chiusa dove il suono si accumula. Il traffico di imbarcazioni da diporto raggiunge il picco nei mesi estivi, frammentando stagionalmente l'habitat acustico."
+      }
+    ],
+    "panel": {
+      "listen": "Registrazione sul Campo",
+      "depth": "Profondità",
+      "recorded": "Registrato",
+      "duration": "Durata",
+      "no_audio": "Audio non ancora disponibile"
+    },
+    "about": {
+      "label": "Sul Progetto",
+      "title": "Attacco-Fuga Sott'acqua",
+      "body": "Aposonía (dal greco: assenza di suono) è un progetto di sound art di Gaetano Cappella che indaga l'inquinamento acustico subacqueo nel Golfo Termaico, Salonicco. Attraverso registrazioni con idrofoni e composizione spaziale, il progetto utilizza la risposta umana attacco-fuga per generare empatia interspecifica con gli organismi marini. Sviluppato durante una residenza supportata da Culture Moves Europe (Programma Europa Creativa / Goethe-Institut)."
+    },
+    "credits": {
+      "artist": "Gaetano Cappella",
+      "support": "Con il supporto di Culture Moves Europe",
+      "programme": "Programma Europa Creativa / Goethe-Institut"
+    }
+  },
+  "es": {
+    "hero": {
+      "eyebrow": "Arte Sonoro · Golfo Termaico · 2024",
+      "title": "APOSONÍA",
+      "subtitle": "Una investigación sobre la contaminación acústica submarina y la empatía interespecífica",
+      "scroll": "Explorar el mapa"
+    },
+    "map": {
+      "label": "Grabaciones de Campo",
+      "title": "Cinco Estaciones de Escucha",
+      "instruction": "Selecciona una estación para escuchar"
+    },
+    "stations": [
+      {
+        "title": "Entrada del Puerto",
+        "location": "40°37'54\"N  22°56'17\"E",
+        "description": "En el umbral entre ciudad y mar, los cargueros generan ondas de presión de baja frecuencia que saturan el entorno acústico."
+      },
+      {
+        "title": "Aguas Poco Profundas Norte",
+        "location": "40°39'07\"N  22°54'54\"E",
+        "description": "Las aguas poco profundas amplifican el ruido antropogénico por reflexión. Las señales de comunicación de los peces son detectables solo en breves intervalos."
+      },
+      {
+        "title": "Golfo Central",
+        "location": "40°36'36\"N  22°58'12\"E",
+        "description": "El centro acústico del golfo. Múltiples fuentes de ruido se superponen continuamente, desorientando a los cetáceos que usan ecolocalización."
+      },
+      {
+        "title": "Paso Sur",
+        "location": "40°35'20\"N  22°59'42\"E",
+        "description": "Las instalaciones industriales emiten ruido tonal a través de estructuras submarinas. Las grabaciones revelan un zumbido persistente a 50 Hz."
+      },
+      {
+        "title": "Ensenada Este",
+        "location": "40°37'35\"N  23°00'36\"E",
+        "description": "Área semi-cerrada donde el sonido se acumula. El tráfico de embarcaciones de recreo alcanza su punto máximo en verano."
+      }
+    ],
+    "panel": {
+      "listen": "Grabación de Campo",
+      "depth": "Profundidad",
+      "recorded": "Grabado",
+      "duration": "Duración",
+      "no_audio": "Audio aún no disponible"
+    },
+    "about": {
+      "label": "Sobre el Proyecto",
+      "title": "Lucha-Huida Bajo el Agua",
+      "body": "Aposonía (del griego: ausencia de sonido) es un proyecto de arte sonoro de Gaetano Cappella sobre la contaminación acústica submarina en el Golfo Termaico, Tesalónica. Desarrollado durante una residencia apoyada por Culture Moves Europe (Programa Europa Creativa / Goethe-Institut)."
+    },
+    "credits": {
+      "artist": "Gaetano Cappella",
+      "support": "Con el apoyo de Culture Moves Europe",
+      "programme": "Programa Europa Creativa / Goethe-Institut"
+    }
+  },
+  "el": {
+    "hero": {
+      "eyebrow": "Ηχητική Τέχνη · Θερμαϊκός Κόλπος · 2024",
+      "title": "ΑΠΟΣΩΝΙΑ",
+      "subtitle": "Έρευνα στην υποβρύχια ηχητική ρύπανση και τη διαειδική ενσυναίσθηση",
+      "scroll": "Εξερεύνηση χάρτη"
+    },
+    "map": {
+      "label": "Ηχογραφήσεις Πεδίου",
+      "title": "Πέντε Σταθμοί Ακρόασης",
+      "instruction": "Επιλέξτε σταθμό για ακρόαση"
+    },
+    "stations": [
+      {
+        "title": "Είσοδος Λιμένα",
+        "location": "40°37'54\"N  22°56'17\"E",
+        "description": "Στο κατώφλι πόλης και θάλασσας, τα φορτηγά πλοία παράγουν κύματα πίεσης χαμηλής συχνότητας που κορεσμένουν το ακουστικό περιβάλλον."
+      },
+      {
+        "title": "Βόρεια Ρηχά",
+        "location": "40°39'07\"N  22°54'54\"E",
+        "description": "Τα ρηχά νερά ενισχύουν τον ανθρωπογενή θόρυβο μέσω ανάκλασης. Τα σήματα επικοινωνίας ψαριών είναι ανιχνεύσιμα μόνο σε σύντομα διαστήματα."
+      },
+      {
+        "title": "Κεντρικός Κόλπος",
+        "location": "40°36'36\"N  22°58'12\"E",
+        "description": "Το ακουστικό κέντρο του κόλπου. Πολλαπλές πηγές θορύβου επικαλύπτονται συνεχώς, αποπροσανατολίζοντας τα κητώδη."
+      },
+      {
+        "title": "Νότιο Πέρασμα",
+        "location": "40°35'20\"N  22°59'42\"E",
+        "description": "Βιομηχανικές εγκαταστάσεις εκπέμπουν τονικό θόρυβο μέσω υποβρύχιων κατασκευών. Ένα επίμονο βούισμα 50 Hz διαπερνά όλες τις ηχογραφήσεις."
+      },
+      {
+        "title": "Ανατολικός Όρμος",
+        "location": "40°37'35\"N  23°00'36\"E",
+        "description": "Ημίκλειστη περιοχή συσσώρευσης ήχου. Η κυκλοφορία σκαφών αναψυχής κορυφώνεται τους καλοκαιρινούς μήνες, κατακερματίζοντας εποχικά το ακουστικό οικότοπο."
+      }
+    ],
+    "panel": {
+      "listen": "Ηχογράφηση Πεδίου",
+      "depth": "Βάθος",
+      "recorded": "Ηχογραφήθηκε",
+      "duration": "Διάρκεια",
+      "no_audio": "Ο ήχος δεν είναι διαθέσιμος ακόμη"
+    },
+    "about": {
+      "label": "Σχετικά με το Έργο",
+      "title": "Επίθεση-Φυγή Υποβρύχια",
+      "body": "Η Αποσωνία (από το ελληνικό: απουσία ήχου) είναι ένα έργο ηχητικής τέχνης του Gaetano Cappella για την υποβρύχια ηχητική ρύπανση στον Θερμαϊκό Κόλπο της Θεσσαλονίκης. Αναπτύχθηκε με υποστήριξη Culture Moves Europe (Πρόγραμμα Δημιουργική Ευρώπη / Goethe-Institut)."
+    },
+    "credits": {
+      "artist": "Gaetano Cappella",
+      "support": "Με την υποστήριξη του Culture Moves Europe",
+      "programme": "Πρόγραμμα Δημιουργική Ευρώπη / Goethe-Institut"
+    }
+  }
+}
