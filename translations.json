@@ -1,0 +1,32 @@
+{
+  "en": {
+    "hero": {
+      "title": "APOSONÍA",
+      "subtitle": "A sound art project by Gaetano Cappella",
+      "cta": "Enter the Exhibition"
+    },
+    "intro": {
+      "heading": "What Sound Reveals When We Learn to Listen"
+    },
+    "map": {
+      "title": "Five Listening Stations",
+      "instruction": "Click each numbered marker to reveal the soundscape"
+    },
+    "stations": {
+      "station1": { "title": "Station 1", "location": "40.6264°N, 22.9358°E", "text": "Content loading...", "date": "March 2026", "depth": "8m", "conditions": "Calm sea" },
+      "station2": { "title": "Station 2", "location": "40.6289°N, 22.9444°E", "text": "Content loading...", "date": "April 2026", "depth": "6m", "conditions": "Moderate" },
+      "station3": { "title": "Station 3", "location": "40.6263°N, 22.9485°E", "text": "Content loading...", "date": "April 2026", "depth": "5m", "conditions": "Clear" },
+      "station4": { "title": "Station 4", "location": "40.6255°N, 22.9515°E", "text": "Content loading...", "date": "April 2026", "depth": "7m", "conditions": "Calm" },
+      "station5": { "title": "Station 5", "location": "40.5950°N, 22.9200°E", "text": "Content loading...", "date": "April 2026", "depth": "4m", "conditions": "Morning calm" }
+    },
+    "about": {
+      "title": "About",
+      "artist_bio": "Gaetano Cappella - Sound Artist",
+      "funding_title": "Funding",
+      "culture_moves": "Culture Moves Europe (Creative Europe / Goethe-Institut)"
+    }
+  },
+  "it": { "hero": { "title": "APOSONÍA", "subtitle": "Un progetto di sound art di Gaetano Cappella", "cta": "Entra" } },
+  "es": { "hero": { "title": "APOSONÍA", "subtitle": "Un proyecto de Gaetano Cappella", "cta": "Entrar" } },
+  "el": { "hero": { "title": "APOSONÍA", "subtitle": "Έργο του Gaetano Cappella", "cta": "Είσοδος" } }
+}
