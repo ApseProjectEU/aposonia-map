@@ -11,7 +11,6 @@ function setLanguage(lang) {
   });
 
   applyTranslations(lang);
-  document.dispatchEvent(new CustomEvent('langchange', { detail: { lang } }));
 }
 
 function applyTranslations(lang) {
@@ -19,29 +18,18 @@ function applyTranslations(lang) {
   const t = window.translations[lang] || window.translations['en'];
 
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    const val = getNestedKey(t, el.dataset.i18n);
-    if (val !== undefined) el.textContent = val;
+    const val = getKey(t, el.dataset.i18n);
+    if (val) el.textContent = val;
   });
 
   document.querySelectorAll('[data-i18n-html]').forEach(el => {
-    const val = getNestedKey(t, el.dataset.i18nHtml);
-    if (val !== undefined) el.innerHTML = val;
-  });
-
-  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-    const val = getNestedKey(t, el.dataset.i18nPlaceholder);
-    if (val !== undefined) el.placeholder = val;
+    const val = getKey(t, el.dataset.i18nHtml);
+    if (val) el.innerHTML = val;
   });
 }
 
-function getNestedKey(obj, keyPath) {
-  return keyPath.split('.').reduce((acc, key) => (acc != null ? acc[key] : undefined), obj);
-}
-
-function t(key) {
-  if (!window.translations) return key;
-  const trans = window.translations[currentLang] || window.translations['en'];
-  return getNestedKey(trans, key) || key;
+function getKey(obj, path) {
+  return path.split('.').reduce((acc, k) => acc && acc[k], obj);
 }
 
 function initLang() {
