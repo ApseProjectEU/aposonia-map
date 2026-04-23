@@ -458,41 +458,41 @@ footer p {
     --space-lg: 60px;
     --space-xl: 80px;
   }
-  
+
   body {
     font-size: 16px;
   }
-  
+
   .language-switcher {
     top: 15px;
     right: 15px;
     padding: 8px 10px;
   }
-  
+
   .language-switcher button {
     padding: 6px 10px;
     font-size: 12px;
   }
-  
+
   #map-container {
     height: 400px;
   }
-  
+
   .station-panel {
     width: 95%;
     max-height: 90vh;
     padding: var(--space-sm);
   }
-  
+
   .metadata dl {
     grid-template-columns: 1fr;
     gap: 5px;
   }
-  
+
   .metadata dt {
     margin-top: 10px;
   }
-  
+
   p {
     text-align: left;
   }
