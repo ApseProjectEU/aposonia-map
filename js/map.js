@@ -1,78 +1,129 @@
-const MapModule = {
-    map: null,
-    points: [],
-    permanentMarkers: [],
+let map;
+let activeMarker = null;
+let currentAudio = null;
 
-    initMap() {
-        this.map = L.map('map', {
-            zoomControl: false
-        }).setView([40.6246, 22.9489], 16);
+const stations = [
+  {
+    id: 1,
+    coords: [40.6318, 22.9380],
+    depth: '12 m',
+    recorded: '2024-03',
+    duration: "4'22\""
+  },
+  {
+    id: 2,
+    coords: [40.6520, 22.9150],
+    depth: '8 m',
+    recorded: '2024-03',
+    duration: "5'10\""
+  },
+  {
+    id: 3,
+    coords: [40.6100, 22.9700],
+    depth: '18 m',
+    recorded: '2024-04',
+    duration: "3'48\""
+  },
+  {
+    id: 4,
+    coords: [40.5890, 22.9950],
+    depth: '22 m',
+    recorded: '2024-04',
+    duration: "6'05\""
+  },
+  {
+    id: 5,
+    coords: [40.6264, 23.0100],
+    depth: '6 m',
+    recorded: '2024-05',
+    duration: "4'55\""
+  }
+];
 
-        // CartoDB Voyager — clean, modern tourist map style
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-            subdomains: 'abcd',
-            maxZoom: 19
-        }).addTo(this.map);
+function markerIcon(n, active) {
+  return L.divIcon({
+    html: `<div class="station-marker${active ? ' active' : ''}">${n}</div>`,
+    className: '',
+    iconSize: [32, 32],
+    iconAnchor: [16, 16]
+  });
+}
 
-        L.control.zoom({ position: 'topright' }).addTo(this.map);
+function openStation(station, marker) {
+  if (activeMarker && activeMarker !== marker) {
+    activeMarker._icon.querySelector('.station-marker').classList.remove('active');
+  }
+  activeMarker = marker;
+  marker._icon.querySelector('.station-marker').classList.add('active');
 
-        this.map.on('click', (e) => this.onMapClick(e));
-        console.log('Map initialized — Nea Paralia, Thessaloniki');
-    },
+  const idx = station.id - 1;
+  document.getElementById('station-number').textContent = `STATION 0${station.id}`;
+  document.getElementById('station-title').textContent = t(`stations.${idx}.title`);
+  document.getElementById('station-location').textContent = t(`stations.${idx}.location`);
+  document.getElementById('station-description').textContent = t(`stations.${idx}.description`);
+  document.getElementById('station-depth').textContent = station.depth;
+  document.getElementById('station-recorded').textContent = station.recorded;
+  document.getElementById('station-duration').textContent = station.duration;
 
-    createAudioMarkerIcon(number) {
-        return L.divIcon({
-            className: 'audio-marker-container',
-            html: `<div class="audio-marker-pulse"></div>
-                   <div class="audio-marker-inner">
-                       <span class="audio-marker-number">${number}</span>
-                   </div>`,
-            iconSize: [46, 46],
-            iconAnchor: [23, 23],
-            popupAnchor: [0, -26]
-        });
-    },
+  resetAudioPlayer();
+  document.getElementById('station-panel').classList.add('visible');
+}
 
-    onMapClick(e) {
-        if (window.UI) {
-            window.UI.updateCoordinateDisplay(e.latlng.lat, e.latlng.lng);
-        }
-    },
+function closeStation() {
+  document.getElementById('station-panel').classList.remove('visible');
+  if (activeMarker) {
+    activeMarker._icon.querySelector('.station-marker').classList.remove('active');
+    activeMarker = null;
+  }
+  stopAudio();
+}
 
-    async loadPoints() {
-        try {
-            const response = await fetch('data/points.json');
-            if (!response.ok) throw new Error(`HTTP ${response.status}`);
-            this.points = await response.json();
-            this.renderAudioMarkers();
-            console.log(`Loaded ${this.points.length} audio markers`);
-        } catch (error) {
-            console.error('Error loading points.json:', error);
-        }
-    },
+function resetAudioPlayer() {
+  stopAudio();
+  document.querySelector('.audio-progress-fill').style.width = '0%';
+  document.querySelector('.audio-time').textContent = '0:00 / 0:00';
+  document.querySelector('.play-btn').textContent = '▶';
+}
 
-    renderAudioMarkers() {
-        this.points.forEach((point, index) => {
-            if (!point.lat || !point.lng) {
-                console.warn('Point missing coordinates:', point);
-                return;
-            }
-            const marker = L.marker([point.lat, point.lng], {
-                icon: this.createAudioMarkerIcon(index + 1)
-            }).addTo(this.map);
+function stopAudio() {
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio = null;
+  }
+}
 
-            marker.on('click', (e) => {
-                L.DomEvent.stopPropagation(e);
-                if (window.UI) {
-                    window.UI.openSidebar(point, index + 1);
-                }
-            });
+function initMap() {
+  map = L.map('map-container', {
+    center: [40.6264, 22.9400],
+    zoom: 12,
+    zoomControl: false,
+    scrollWheelZoom: false
+  });
 
-            this.permanentMarkers.push({ marker, data: point });
-        });
-        console.log(`Rendered ${this.permanentMarkers.length} audio markers`);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 19
+  }).addTo(map);
+
+  L.control.zoom({ position: 'bottomleft' }).addTo(map);
+
+  stations.forEach(station => {
+    const marker = L.marker(station.coords, { icon: markerIcon(station.id, false) }).addTo(map);
+    marker.on('click', () => openStation(station, marker));
+  });
+
+  document.getElementById('station-close').addEventListener('click', closeStation);
+
+  document.querySelector('.play-btn').addEventListener('click', () => {
+    document.querySelector('.audio-time').textContent = t('station_panel.no_audio');
+  });
+
+  document.addEventListener('langchange', () => {
+    if (document.getElementById('station-panel').classList.contains('visible') && activeMarker) {
+      const idx = stations.findIndex(s => s.coords === activeMarker.getLatLng());
     }
-};
+  });
+}
 
-window.MapModule = MapModule;
+document.addEventListener('DOMContentLoaded', initMap);
