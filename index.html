@@ -1,112 +1,507 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APOSONÍA - Gaetano Cappella</title>
-    <meta name="description" content="A sound art project investigating underwater acoustic pollution in Thermaikos Gulf, Thessaloniki">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/museum.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>APOSONÍA — A graphic score in five movements</title>
+<meta name="description" content="A sound art composition on underwater acoustic pollution in the Thermaikos Gulf. Graphic score by Gaetano Cappella, 2026." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="anonymous" />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
-    <!-- Language Switcher -->
-    <nav class="language-switcher">
-        <button data-lang="en" class="active">EN</button>
-        <button data-lang="it">IT</button>
-        <button data-lang="es">ES</button>
-        <button data-lang="el">ΕΛ</button>
-    </nav>
-    
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <h1 class="hero-title" data-i18n="hero.title">APOSONÍA</h1>
-            <p class="hero-subtitle" data-i18n="hero.subtitle">A sound art project by Gaetano Cappella</p>
-            <a href="#introduction" class="cta-minimal" data-i18n="hero.cta">Enter the Exhibition</a>
+
+<div class="paper" aria-hidden="true"></div>
+<div class="deckle" aria-hidden="true"></div>
+
+<!-- ======= FRONTISPIECE ======= -->
+<section class="front" id="front">
+
+  <div class="front__top">
+    <div class="front__stamp">
+      <span>Opus 03</span>
+      <span>MMXXVI</span>
+    </div>
+    <div class="front__catalog">
+      <span>SOS.APS.CME—III</span>
+    </div>
+  </div>
+
+  <div class="front__center">
+    <p class="front__genre">a graphic score</p>
+    <h1 class="front__title">APOSONÍA</h1>
+    <p class="front__sub">
+      <em>for hydrophone, five littoral stations,<br/>
+      and an amygdala at rest</em>
+    </p>
+
+    <div class="front__meta">
+      <div><span>By</span>GAETANO CAPPELLA</div>
+      <div><span>Field</span>Thermaikos Gulf, 40° 35′ N — 22° 56′ E</div>
+      <div><span>Recorded</span>March – May MMXXVI</div>
+      <div><span>Duration</span>49′ 16″ (complete)</div>
+    </div>
+  </div>
+
+  <div class="front__bottom">
+    <p class="front__epigraph">
+      “It is not a question of<br/>
+      <em>listening to sound</em>, but of<br/>
+      <em>letting sound listen to us</em>.”
+    </p>
+    <p class="front__cue">↓ turn the page</p>
+  </div>
+
+</section>
+
+<!-- ======= INSTRUCTIONS ======= -->
+<section class="instructions" id="notes">
+  <header class="sect-head">
+    <span class="sect-num">§ 0</span>
+    <h2>Performance notes</h2>
+  </header>
+
+  <ol class="notes">
+    <li>
+      <span class="notes__n">I.</span>
+      <p>The score is to be read in sequence, from Movement 1 to Movement 5. No station is autonomous. The gulf is a single body.</p>
+    </li>
+    <li>
+      <span class="notes__n">II.</span>
+      <p>Each movement carries its own <em>tempo</em>, <em>dynamic envelope</em>, and <em>dominant frequency band</em>. These are descriptions of the recording, not instructions for an interpreter.</p>
+    </li>
+    <li>
+      <span class="notes__n">III.</span>
+      <p>Performance medium: <em>a human nervous system</em>. The listener is the instrument. The score does not ask to be played; it asks to be undergone.</p>
+    </li>
+    <li>
+      <span class="notes__n">IV.</span>
+      <p>Where the annotation <span class="redline">▲</span> appears, the recording crosses the psychoacoustic threshold associated with involuntary sympathetic activation (cortisol rise, muscular tension, accelerated heart rate).</p>
+    </li>
+    <li>
+      <span class="notes__n">V.</span>
+      <p>Headphones are not recommended. Headphones are <em>required</em>.</p>
+    </li>
+  </ol>
+
+  <div class="dynamics">
+    <span class="dyn">pp</span>
+    <span class="dyn">p</span>
+    <span class="dyn">mp</span>
+    <span class="dyn">mf</span>
+    <span class="dyn">f</span>
+    <span class="dyn">ff</span>
+    <span class="dyn">fff</span>
+    <span class="dyn-key">— dynamic range referenced throughout —</span>
+  </div>
+</section>
+
+<!-- ======= THE FIELD (Cage-like star chart) ======= -->
+<section class="field" id="field">
+  <header class="sect-head">
+    <span class="sect-num">§ 1</span>
+    <h2>The field</h2>
+    <p class="sect-desc">A notation of the gulf, not a map. Time expands horizontally. Frequency expands vertically. Pressure is read as weight of mark.</p>
+  </header>
+
+  <figure class="plate">
+    <figcaption class="plate__cap">Plate I — Acoustic field, Thermaikos Gulf, after Cage</figcaption>
+    <svg id="fieldchart" viewBox="0 0 1000 560" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg>
+    <div class="plate__axes">
+      <span class="ax ax--y">← frequency (Hz) →</span>
+      <span class="ax ax--x">← time (min) →</span>
+    </div>
+  </figure>
+</section>
+
+<!-- ======= PLATE II — THE SITE (Leaflet map restyled) ======= -->
+<section class="site" id="site">
+  <header class="sect-head">
+    <span class="sect-num">§ 2</span>
+    <h2>The site</h2>
+    <p class="sect-desc">Five listening stations along the Thermaikos waterfront. The score is played by walking. Each marker is a movement; each marker carries a QR transfer to the station page.</p>
+  </header>
+
+  <figure class="plate plate--site">
+    <figcaption class="plate__cap">Plate II — Thermaikos Gulf, stations I – V, <em>ad audiendum</em></figcaption>
+
+    <div class="sitewrap">
+      <div id="sitemap" role="application" aria-label="Listening stations map"></div>
+
+      <!-- Chart corners, like an old nautical chart -->
+      <span class="corner tl"></span>
+      <span class="corner tr"></span>
+      <span class="corner bl"></span>
+      <span class="corner br"></span>
+
+      <!-- Compass rose -->
+      <div class="compass" aria-hidden="true">
+        <svg viewBox="0 0 60 60">
+          <circle cx="30" cy="30" r="28" fill="none" stroke="currentColor" stroke-width="0.5"/>
+          <circle cx="30" cy="30" r="22" fill="none" stroke="currentColor" stroke-width="0.3"/>
+          <polygon points="30,4 33,30 30,28 27,30" fill="currentColor"/>
+          <polygon points="30,56 33,30 30,32 27,30" fill="none" stroke="currentColor" stroke-width="0.5"/>
+          <text x="30" y="14" text-anchor="middle" font-family="EB Garamond, serif" font-size="7" font-style="italic" fill="currentColor">N</text>
+        </svg>
+      </div>
+
+      <!-- Scale bar -->
+      <div class="scalebar" aria-hidden="true">
+        <div class="scalebar__line"></div>
+        <div class="scalebar__labels">
+          <span>0</span>
+          <span>5 km</span>
         </div>
-        <canvas id="waves"></canvas>
-    </section>
-    
-    <!-- Introduction Section -->
-    <section id="introduction">
-        <div class="content-container">
-            <h2 data-i18n="intro.heading">What Sound Reveals When We Learn to Listen</h2>
-            
-            <div class="intro-text">
-                <p data-i18n="intro.paragraph1">Aposonía is a site-specific sound art project investigating underwater acoustic pollution in the Thermaikos Gulf, Thessaloniki. Through five listening stations positioned along the city's waterfront, the work exposes a paradox: this marine area, legally protected under the Natura 2000 network and the Ramsar Convention, suffers from invisible acoustic pollution that remains imperceptible to human senses above water.</p>
-                
-                <p data-i18n="intro.paragraph2">As a sound artist working with hydrophone field recordings and psychoacoustic composition, I approach the underwater soundscape as a sonic territory that reveals what our eyes cannot see and what our ears—positioned above water—cannot hear. The hydrophone becomes an instrument of perceptual translation, allowing us entry into the acoustic reality inhabited by marine life.</p>
-            </div>
-            
-            <div class="culture-moves-credit">
-                <p data-i18n="intro.culture_moves">This project was developed during a Culture Moves Europe residency (March–May 2026), a mobility program funded by the Creative Europe initiative of the European Union and implemented by the Goethe-Institut. Culture Moves Europe supports individual artists and cultural professionals across multiple disciplines, fostering cross-border collaboration and artistic exchange throughout Creative Europe countries.</p>
-            </div>
-            
-            <div class="psychoacoustics-primer">
-                <h3 data-i18n="intro.fight_flight_title">The Psychoacoustic Foundation: Fight-or-Flight</h3>
-                <p data-i18n="intro.fight_flight_explanation">At the heart of Aposonía lies a psychophysiological mechanism that bridges human experience and marine suffering: the fight-or-flight response. When the amygdala perceives danger through sound alone, it triggers involuntary changes—adrenaline release, increased heart rate, muscle tension. Certain sonic characteristics activate this response before conscious thought intervenes. Conversely, natural water sounds produce the opposite effect: heart rate decreases, cortisol drops, parasympathetic activation creates a meditative state. This installation uses this duality to create embodied interspecies empathy—when you hear acoustic pollution and feel your body tense, you experience in compressed form what marine animals endure continuously, without escape.</p>
-            </div>
-            
-            <div class="artist-statement">
-                <blockquote data-i18n="intro.artist_statement">I work with sound not as documentation but as a medium of translation between worlds. The hydrophone is my bridge into an acoustic reality we cannot otherwise access. Through this project, I ask: what does it mean to listen across species boundaries? What happens when we experience physiologically, through our own nervous systems, the chronic stress that underwater noise pollution inflicts on marine life? Aposonía is an invitation to hear what has been rendered inaudible by our position above water—and to feel, through psychoacoustic empathy, what it means to inhabit a world where silence has been stolen.</blockquote>
-                <cite>— Gaetano Cappella</cite>
-            </div>
+      </div>
+    </div>
+
+    <div class="plate__axes">
+      <span class="ax">← lon 22.80° E</span>
+      <span>Thermaïkos Gulf</span>
+      <span class="ax">lat 40.65° N ↑</span>
+    </div>
+  </figure>
+
+  <!-- Station index table, below the map -->
+  <div class="station-table">
+    <h3>Station index</h3>
+    <ol>
+      <li>
+        <span class="st__n">I</span>
+        <div class="st__body">
+          <h4>White Tower Embankment</h4>
+          <p class="st__coord">40.6264° N — 22.9486° E</p>
         </div>
-    </section>
-    
-    <!-- Listening Stations Map -->
-    <section id="listening-map">
-        <div class="content-container">
-            <h2 data-i18n="map.title">Five Listening Stations</h2>
-            <p class="map-instruction" data-i18n="map.instruction">Click each numbered marker to reveal the soundscape and story</p>
+        <a class="st__go" href="station.html?n=1">visit ↗</a>
+      </li>
+      <li>
+        <span class="st__n">II</span>
+        <div class="st__body">
+          <h4>Port Pier № 1</h4>
+          <p class="st__coord">40.6358° N — 22.9361° E</p>
         </div>
-        
-        <div id="map-container"></div>
-        
-        <!-- Station Panels (populated dynamically) -->
-        <div id="station-panels"></div>
-    </section>
-    
-    <!-- About Section -->
-    <section id="about">
-        <div class="content-container">
-            <h2 data-i18n="about.title">About the Project</h2>
-            
-            <div class="artist-bio">
-                <h3>Gaetano Cappella</h3>
-                <p data-i18n="about.artist_bio">Gaetano Cappella is a sound artist working at the intersection of field recording, psychoacoustics, and spatial composition. His practice explores how sound shapes our perception of environment, ecology, and interspecies relationships. Through hydrophone recordings and site-specific installations, he makes audible the acoustic dimensions of environmental change that remain invisible to conventional observation.</p>
-            </div>
-            
-            <div class="funding-credit">
-                <h3 data-i18n="about.funding_title">Funding & Support</h3>
-                <p data-i18n="about.culture_moves">This project was developed during a Culture Moves Europe residency (March–May 2026), a mobility program funded by the Creative Europe initiative of the European Union and implemented by the Goethe-Institut.</p>
-                <p data-i18n="about.culture_moves_description">Culture Moves Europe supports individual artists and cultural professionals across architecture, cultural heritage, design, literature, music, performing arts, and visual arts, fostering international collaboration and artistic exchange throughout Creative Europe countries.</p>
-            </div>
+        <a class="st__go" href="station.html?n=2">visit ↗</a>
+      </li>
+      <li>
+        <span class="st__n">III</span>
+        <div class="st__body">
+          <h4>Nea Paralia, beneath the umbrellas</h4>
+          <p class="st__coord">40.6201° N — 22.9531° E</p>
         </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="content-container">
-            <p>&copy; 2026 Gaetano Cappella. Supported by Culture Moves Europe.</p>
+        <a class="st__go" href="station.html?n=3">visit ↗</a>
+      </li>
+      <li>
+        <span class="st__n">IV</span>
+        <div class="st__body">
+          <h4>Kalamaria coast</h4>
+          <p class="st__coord">40.5835° N — 22.9543° E</p>
         </div>
-    </footer>
-    
-    <!-- Scripts -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="js/lang.js"></script>
-    <script src="js/map.js"></script>
-    <script src="js/ambient.js"></script>
-    
+        <a class="st__go" href="station.html?n=4">visit ↗</a>
+      </li>
+      <li>
+        <span class="st__n">V</span>
+        <div class="st__body">
+          <h4>Axios Delta — the reference</h4>
+          <p class="st__coord">40.4860° N — 22.8430° E</p>
+        </div>
+        <a class="st__go" href="station.html?n=5">visit ↗</a>
+      </li>
+    </ol>
+    <p class="station-table__note">
+      <em>Each station bears a physical plaque with a QR code on the Thessaloniki waterfront. Scan to activate the recording in situ, with headphones.</em>
+    </p>
+  </div>
+</section>
+
+<!-- ======= MOVEMENTS 1-5 ======= -->
+<section class="score">
+
+  <article class="mvt" id="mvt-1" data-mvt="1">
+    <header class="mvt__head">
+      <div class="mvt__num">I</div>
+      <div class="mvt__title-block">
+        <h3 class="mvt__title">White Tower Embankment</h3>
+        <p class="mvt__instr">for hydrophone, 3 m depth</p>
+      </div>
+      <div class="mvt__metrics">
+        <div><span>Duration</span>08′ 14″</div>
+        <div><span>Tempo</span>Andante marino</div>
+        <div><span>Dynamic</span><em>mp &lt; f</em></div>
+        <div><span>Band</span>60 – 280 Hz</div>
+      </div>
+    </header>
+
+    <div class="mvt__body">
+      <p class="mvt__opening">
+        <span class="drop">T</span>he promenade is silent. The hydrophone
+        disagrees. At three metres below the embankment a continuous
+        low-frequency hum rises from below the horizon of human
+        attention, a drone without origin, without author, without end.
+      </p>
+
+      <div class="mvt__annotation">
+        <div class="ann"><span class="ann__k">Coord.</span><span class="ann__v">40.6264° N — 22.9486° E</span></div>
+        <div class="ann"><span class="ann__k">Recorded</span><span class="ann__v">14:20 local, 12 March MMXXVI</span></div>
+        <div class="ann"><span class="ann__k">Class.</span><span class="ann__v">Anthropophony, continuous</span></div>
+        <div class="ann"><span class="ann__k">Threshold</span><span class="ann__v"><span class="redline">▲</span> at 03′ 42″</span></div>
+      </div>
+
+      <div class="notation" aria-hidden="true">
+        <svg viewBox="0 0 800 120" preserveAspectRatio="none"></svg>
+      </div>
+
+      <p class="mvt__note">
+        A sympathetic activation is measurable at the three-minute mark.
+        Listeners report shoulder tension without knowing why.
+      </p>
+
+      <button class="cue" data-mvt-play="1">
+        <span class="cue__icon">▸</span>
+        <span class="cue__label">perform movement I</span>
+        <span class="cue__time">08′ 14″</span>
+      </button>
+    </div>
+  </article>
+
+  <article class="mvt" id="mvt-2" data-mvt="2">
+    <header class="mvt__head">
+      <div class="mvt__num">II</div>
+      <div class="mvt__title-block">
+        <h3 class="mvt__title">Port Pier № 1</h3>
+        <p class="mvt__instr">for hydrophone, hull contact</p>
+      </div>
+      <div class="mvt__metrics">
+        <div><span>Duration</span>11′ 02″</div>
+        <div><span>Tempo</span>Pesante</div>
+        <div><span>Dynamic</span><em>f &lt; ff &lt; fff</em></div>
+        <div><span>Band</span>20 – 180 Hz</div>
+      </div>
+    </header>
+
+    <div class="mvt__body">
+      <p class="mvt__opening">
+        <span class="drop">P</span>ropellers. Hull resonance. The
+        harmonics of commerce, written in low frequencies that
+        travel through water for kilometres without losing force.
+        No break. No silence. No release.
+      </p>
+
+      <div class="mvt__annotation">
+        <div class="ann"><span class="ann__k">Coord.</span><span class="ann__v">40.6358° N — 22.9361° E</span></div>
+        <div class="ann"><span class="ann__k">Recorded</span><span class="ann__v">06:50 local, 14 March MMXXVI</span></div>
+        <div class="ann"><span class="ann__k">Class.</span><span class="ann__v">Anthropophony, dominant</span></div>
+        <div class="ann"><span class="ann__k">Threshold</span><span class="ann__v"><span class="redline">▲</span> immediate</span></div>
+      </div>
+
+      <div class="notation" aria-hidden="true">
+        <svg viewBox="0 0 800 120" preserveAspectRatio="none"></svg>
+      </div>
+
+      <p class="mvt__note">
+        For the marine animal, there is no elsewhere. Retreat is a
+        human concept. The fish remains inside the hum, organ by organ.
+      </p>
+
+      <button class="cue" data-mvt-play="2">
+        <span class="cue__icon">▸</span>
+        <span class="cue__label">perform movement II</span>
+        <span class="cue__time">11′ 02″</span>
+      </button>
+    </div>
+  </article>
+
+  <article class="mvt" id="mvt-3" data-mvt="3">
+    <header class="mvt__head">
+      <div class="mvt__num">III</div>
+      <div class="mvt__title-block">
+        <h3 class="mvt__title">Nea Paralia, beneath the umbrellas</h3>
+        <p class="mvt__instr">for hydrophone and open water</p>
+      </div>
+      <div class="mvt__metrics">
+        <div><span>Duration</span>07′ 48″</div>
+        <div><span>Tempo</span>Rubato</div>
+        <div><span>Dynamic</span><em>mp ↔ f</em></div>
+        <div><span>Band</span>80 – 3200 Hz</div>
+      </div>
+    </header>
+
+    <div class="mvt__body">
+      <p class="mvt__opening">
+        <span class="drop">B</span>etween the city and the sea a
+        negotiation: wave motion, shore currents, the distant vibration
+        of construction, two outboards. A counterpoint without resolution.
+      </p>
+
+      <div class="mvt__annotation">
+        <div class="ann"><span class="ann__k">Coord.</span><span class="ann__v">40.6201° N — 22.9531° E</span></div>
+        <div class="ann"><span class="ann__k">Recorded</span><span class="ann__v">19:05 local, 18 March MMXXVI</span></div>
+        <div class="ann"><span class="ann__k">Class.</span><span class="ann__v">Mixed, transitional</span></div>
+        <div class="ann"><span class="ann__k">Threshold</span><span class="ann__v">intermittent</span></div>
+      </div>
+
+      <div class="notation" aria-hidden="true">
+        <svg viewBox="0 0 800 120" preserveAspectRatio="none"></svg>
+      </div>
+
+      <p class="mvt__note">
+        The ear begins to learn the difference between wind and motor,
+        between swell and hull. This is the movement that teaches listening.
+      </p>
+
+      <button class="cue" data-mvt-play="3">
+        <span class="cue__icon">▸</span>
+        <span class="cue__label">perform movement III</span>
+        <span class="cue__time">07′ 48″</span>
+      </button>
+    </div>
+  </article>
+
+  <article class="mvt" id="mvt-4" data-mvt="4">
+    <header class="mvt__head">
+      <div class="mvt__num">IV</div>
+      <div class="mvt__title-block">
+        <h3 class="mvt__title">Kalamaria coast</h3>
+        <p class="mvt__instr">for hydrophone, sand–rock floor</p>
+      </div>
+      <div class="mvt__metrics">
+        <div><span>Duration</span>09′ 28″</div>
+        <div><span>Tempo</span>Respirato</div>
+        <div><span>Dynamic</span><em>p &lt; mp</em></div>
+        <div><span>Band</span>120 – 6000 Hz</div>
+      </div>
+    </header>
+
+    <div class="mvt__body">
+      <p class="mvt__opening">
+        <span class="drop">T</span>he anthropogenic pressure recedes.
+        In its absence the biological begins to speak: crustacean clicks,
+        fish vocalisations, the snap of shrimp, the unhurried geometry
+        of the undisturbed.
+      </p>
+
+      <div class="mvt__annotation">
+        <div class="ann"><span class="ann__k">Coord.</span><span class="ann__v">40.5835° N — 22.9543° E</span></div>
+        <div class="ann"><span class="ann__k">Recorded</span><span class="ann__v">05:30 local, 22 March MMXXVI</span></div>
+        <div class="ann"><span class="ann__k">Class.</span><span class="ann__v">Biophony, emergent</span></div>
+        <div class="ann"><span class="ann__k">Threshold</span><span class="ann__v">none</span></div>
+      </div>
+
+      <div class="notation" aria-hidden="true">
+        <svg viewBox="0 0 800 120" preserveAspectRatio="none"></svg>
+      </div>
+
+      <p class="mvt__note">
+        A parasympathetic response typically appears here. The body
+        releases what it did not know it was holding.
+      </p>
+
+      <button class="cue" data-mvt-play="4">
+        <span class="cue__icon">▸</span>
+        <span class="cue__label">perform movement IV</span>
+        <span class="cue__time">09′ 28″</span>
+      </button>
+    </div>
+  </article>
+
+  <article class="mvt" id="mvt-5" data-mvt="5">
+    <header class="mvt__head">
+      <div class="mvt__num">V</div>
+      <div class="mvt__title-block">
+        <h3 class="mvt__title">Axios Delta — the reference</h3>
+        <p class="mvt__instr">for hydrophone, wetland water</p>
+      </div>
+      <div class="mvt__metrics">
+        <div><span>Duration</span>12′ 44″</div>
+        <div><span>Tempo</span>Sospeso</div>
+        <div><span>Dynamic</span><em>ppp — p</em></div>
+        <div><span>Band</span>200 – 9000 Hz</div>
+      </div>
+    </header>
+
+    <div class="mvt__body">
+      <p class="mvt__opening">
+        <span class="drop">T</span>he gulf, away from the gulf. The Axios
+        Delta — Natura 2000, Ramsar — gives a reading of what the whole
+        body of water might have sounded like before the hum. It is
+        neither nostalgic nor utopian. It is simply, briefly, audible.
+      </p>
+
+      <div class="mvt__annotation">
+        <div class="ann"><span class="ann__k">Coord.</span><span class="ann__v">40.4860° N — 22.8430° E</span></div>
+        <div class="ann"><span class="ann__k">Recorded</span><span class="ann__v">04:10 local, 29 March MMXXVI</span></div>
+        <div class="ann"><span class="ann__k">Class.</span><span class="ann__v">Biophony, reference</span></div>
+        <div class="ann"><span class="ann__k">Threshold</span><span class="ann__v">absent</span></div>
+      </div>
+
+      <div class="notation" aria-hidden="true">
+        <svg viewBox="0 0 800 120" preserveAspectRatio="none"></svg>
+      </div>
+
+      <p class="mvt__note">
+        The composition ends not with resolution but with reference.
+        What the water still holds, for whoever still knows how to hear it.
+      </p>
+
+      <button class="cue" data-mvt-play="5">
+        <span class="cue__icon">▸</span>
+        <span class="cue__label">perform movement V</span>
+        <span class="cue__time">12′ 44″</span>
+      </button>
+    </div>
+  </article>
+
+</section>
+
+<!-- ======= COLOPHON ======= -->
+<footer class="colophon" id="colophon">
+  <div class="colophon__rule"></div>
+
+  <div class="colophon__grid">
+    <div>
+      <h4>Composition</h4>
+      <p>Gaetano Cappella, 2026.<br/>Five movements, hydrophone field recordings, Thermaikos Gulf.</p>
+    </div>
+    <div>
+      <h4>Residency</h4>
+      <p>Culture Moves Europe<br/>March – May 2026<br/>Thessaloniki</p>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <p>Creative Europe, European Union<br/>Implemented by Goethe-Institut</p>
+    </div>
+    <div>
+      <h4>Produced by</h4>
+      <p>Soundscapes of South Europe APS<br/>Lama dei Peligni, Italy</p>
+    </div>
+    <div>
+      <h4>Licence</h4>
+      <p>CC BY 4.0 — recordings<br/>All rights reserved — score</p>
+    </div>
+    <div>
+      <h4>Typeset in</h4>
+      <p>EB Garamond &amp; IBM Plex Mono<br/>on recycled paper, digitally</p>
+    </div>
+  </div>
+
+  <p class="colophon__finis">— fin —</p>
+</footer>
+
+<!-- Transport (bottom strip) -->
+<div class="transport" role="region" aria-label="Audio transport" hidden>
+  <div class="transport__left">
+    <span class="transport__idx">—</span>
+    <span class="transport__name">no movement selected</span>
+  </div>
+  <button class="transport__play" aria-label="Play / pause">▸</button>
+  <div class="transport__bar"><div id="tprog"></div></div>
+  <span class="transport__time"><span id="tcur">0:00</span> / <span id="tdur">—:—</span></span>
+  <button class="transport__close" aria-label="Close">✕</button>
+  <audio id="audio" preload="none"></audio>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
 </body>
 </html>
