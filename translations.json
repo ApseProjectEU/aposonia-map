@@ -1,0 +1,54 @@
+{
+  "en": {
+    "hero": { "title": "APOSONÍA", "subtitle": "A sound art project by Gaetano Cappella", "cta": "Enter the Exhibition" },
+    "intro": { "heading": "What Sound Reveals When We Learn to Listen" },
+    "map": { "title": "Five Listening Stations", "instruction": "Click each numbered marker to reveal the soundscape" },
+    "stations": {
+      "station1": { "title": "Station 1 — Port Entrance", "location": "40.6264°N, 22.9358°E", "text": "At the threshold between city and sea, cargo vessels generate low-frequency pressure waves that saturate the acoustic environment.", "date": "March 2026", "depth": "8m", "conditions": "Calm sea" },
+      "station2": { "title": "Station 2 — Northern Shallows", "location": "40.6289°N, 22.9444°E", "text": "Shallow waters amplify anthropogenic noise through reflection. Fish communication signals are detectable only in brief intervals.", "date": "April 2026", "depth": "6m", "conditions": "Moderate" },
+      "station3": { "title": "Station 3 — Central Gulf", "location": "40.6263°N, 22.9485°E", "text": "The acoustic centre of the gulf. Multiple noise sources overlap continuously, creating a masking effect that disorients cetaceans.", "date": "April 2026", "depth": "5m", "conditions": "Clear" },
+      "station4": { "title": "Station 4 — Southern Passage", "location": "40.6255°N, 22.9515°E", "text": "Industrial facilities emit tonal noise through underwater structures. A persistent 50Hz hum underlies all other sounds.", "date": "April 2026", "depth": "7m", "conditions": "Calm" },
+      "station5": { "title": "Station 5 — Eastern Inlet", "location": "40.5950°N, 22.9200°E", "text": "A semi-enclosed area where sound accumulates. Recreational boat traffic peaks in summer, fragmenting the acoustic habitat.", "date": "April 2026", "depth": "4m", "conditions": "Morning calm" }
+    },
+    "about": { "title": "About the Project", "funding_title": "Funding & Support", "culture_moves": "This project was developed during a Culture Moves Europe residency (March–May 2026), funded by Creative Europe / Goethe-Institut." }
+  },
+  "it": {
+    "hero": { "title": "APOSONÍA", "subtitle": "Un progetto di sound art di Gaetano Cappella", "cta": "Entra nella Mostra" },
+    "intro": { "heading": "Cosa rivela il suono quando impariamo ad ascoltare" },
+    "map": { "title": "Cinque Stazioni d'Ascolto", "instruction": "Clicca ogni marker numerato per ascoltare il paesaggio sonoro" },
+    "stations": {
+      "station1": { "title": "Stazione 1 — Ingresso del Porto", "location": "40.6264°N, 22.9358°E", "text": "Alla soglia tra città e mare, le navi cargo generano onde di pressione a bassa frequenza.", "date": "Marzo 2026", "depth": "8m", "conditions": "Mare calmo" },
+      "station2": { "title": "Stazione 2 — Bassi Fondali Nord", "location": "40.6289°N, 22.9444°E", "text": "Le acque basse amplificano il rumore per riflessione.", "date": "Aprile 2026", "depth": "6m", "conditions": "Moderato" },
+      "station3": { "title": "Stazione 3 — Golfo Centrale", "location": "40.6263°N, 22.9485°E", "text": "Il centro acustico del golfo. Più fonti di rumore si sovrappongono continuamente.", "date": "Aprile 2026", "depth": "5m", "conditions": "Limpido" },
+      "station4": { "title": "Stazione 4 — Passaggio Sud", "location": "40.6255°N, 22.9515°E", "text": "Impianti industriali emettono rumore tonale attraverso strutture subacquee.", "date": "Aprile 2026", "depth": "7m", "conditions": "Calmo" },
+      "station5": { "title": "Stazione 5 — Insenatura Est", "location": "40.5950°N, 22.9200°E", "text": "Area semi-chiusa dove il suono si accumula.", "date": "Aprile 2026", "depth": "4m", "conditions": "Calma mattutina" }
+    },
+    "about": { "title": "Sul Progetto", "funding_title": "Finanziamento", "culture_moves": "Progetto sviluppato durante una residenza Culture Moves Europe (marzo–maggio 2026), finanziato da Europa Creativa / Goethe-Institut." }
+  },
+  "es": {
+    "hero": { "title": "APOSONÍA", "subtitle": "Un proyecto de arte sonoro de Gaetano Cappella", "cta": "Entrar a la Exposición" },
+    "intro": { "heading": "Lo que revela el sonido cuando aprendemos a escuchar" },
+    "map": { "title": "Cinco Estaciones de Escucha", "instruction": "Haz clic en cada marcador para escuchar el paisaje sonoro" },
+    "stations": {
+      "station1": { "title": "Estación 1 — Entrada del Puerto", "location": "40.6264°N, 22.9358°E", "text": "En el umbral entre ciudad y mar.", "date": "Marzo 2026", "depth": "8m", "conditions": "Mar en calma" },
+      "station2": { "title": "Estación 2 — Aguas Poco Profundas Norte", "location": "40.6289°N, 22.9444°E", "text": "Las aguas poco profundas amplifican el ruido por reflexión.", "date": "Abril 2026", "depth": "6m", "conditions": "Moderado" },
+      "station3": { "title": "Estación 3 — Golfo Central", "location": "40.6263°N, 22.9485°E", "text": "El centro acústico del golfo.", "date": "Abril 2026", "depth": "5m", "conditions": "Despejado" },
+      "station4": { "title": "Estación 4 — Paso Sur", "location": "40.6255°N, 22.9515°E", "text": "Instalaciones industriales emiten ruido tonal.", "date": "Abril 2026", "depth": "7m", "conditions": "Calmo" },
+      "station5": { "title": "Estación 5 — Ensenada Este", "location": "40.5950°N, 22.9200°E", "text": "Área semi-cerrada donde se acumula el sonido.", "date": "Abril 2026", "depth": "4m", "conditions": "Calma matutina" }
+    },
+    "about": { "title": "Sobre el Proyecto", "funding_title": "Financiamiento", "culture_moves": "Proyecto desarrollado durante una residencia Culture Moves Europe (marzo–mayo 2026), financiado por Europa Creativa / Goethe-Institut." }
+  },
+  "el": {
+    "hero": { "title": "ΑΠΟΣΩΝΙΑ", "subtitle": "Ένα έργο ηχητικής τέχνης του Gaetano Cappella", "cta": "Είσοδος στην Έκθεση" },
+    "intro": { "heading": "Τι αποκαλύπτει ο ήχος όταν μαθαίνουμε να ακούμε" },
+    "map": { "title": "Πέντε Σταθμοί Ακρόασης", "instruction": "Κάντε κλικ σε κάθε αριθμημένο δείκτη για να ακούσετε" },
+    "stations": {
+      "station1": { "title": "Σταθμός 1 — Είσοδος Λιμένα", "location": "40.6264°N, 22.9358°E", "text": "Στο κατώφλι πόλης και θάλασσας.", "date": "Μάρτιος 2026", "depth": "8m", "conditions": "Ήρεμη θάλασσα" },
+      "station2": { "title": "Σταθμός 2 — Βόρεια Ρηχά", "location": "40.6289°N, 22.9444°E", "text": "Τα ρηχά νερά ενισχύουν τον θόρυβο.", "date": "Απρίλιος 2026", "depth": "6m", "conditions": "Μέτριο" },
+      "station3": { "title": "Σταθμός 3 — Κεντρικός Κόλπος", "location": "40.6263°N, 22.9485°E", "text": "Το ακουστικό κέντρο του κόλπου.", "date": "Απρίλιος 2026", "depth": "5m", "conditions": "Καθαρό" },
+      "station4": { "title": "Σταθμός 4 — Νότιο Πέρασμα", "location": "40.6255°N, 22.9515°E", "text": "Βιομηχανικές εγκαταστάσεις εκπέμπουν τονικό θόρυβο.", "date": "Απρίλιος 2026", "depth": "7m", "conditions": "Ήρεμο" },
+      "station5": { "title": "Σταθμός 5 — Ανατολικός Όρμος", "location": "40.5950°N, 22.9200°E", "text": "Ημίκλειστη περιοχή συσσώρευσης ήχου.", "date": "Απρίλιος 2026", "depth": "4m", "conditions": "Πρωινή γαλήνη" }
+    },
+    "about": { "title": "Σχετικά με το Έργο", "funding_title": "Χρηματοδότηση", "culture_moves": "Αναπτύχθηκε κατά τη διάρκεια residency Culture Moves Europe (Μάρτιος–Μάιος 2026), με υποστήριξη Creative Europe / Goethe-Institut." }
+  }
+}
